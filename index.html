@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamorena Beauty Co. | Enlaces Oficiales</title>
+    <!-- Importamos una fuente elegante de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* VARIABLES DE COLOR */
+        :root {
+            --dorado: #D4AF37; /* Un dorado un poco más oscuro para que se lea bien en fondo claro */
+            --rosa-pastel: #FADBD8; /* Rosa pastel suave */
+            --rosa-fuerte: #F1948A; /* Rosa un poco más intenso para hover */
+            --blanco: #ffffff;
+            --texto-oscuro: #4A4A4A;
+            --sombra: rgba(0, 0, 0, 0.08);
+        }
+
+        /* ESTILOS GENERALES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Fondo claro con degradado rosa pastel */
+            background: linear-gradient(135deg, #ffffff 0%, #FADBD8 100%);
+            font-family: 'Montserrat', sans-serif;
+            color: var(--texto-oscuro);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        .container {
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+            animation: fadeIn 1.2s ease-in-out;
+            background: rgba(255, 255, 255, 0.6); /* Tarjeta blanca semitransparente */
+            padding: 30px 20px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px var(--sombra);
+            backdrop-filter: blur(10px);
+        }
+
+        /* LOGO */
+        .logo {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 15px;
+            /* Si tu logo es PNG transparente, se verá perfecto aquí */
+        }
+
+        /* TÍTULO DE BIENVENIDA */
+        .welcome-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--dorado);
+            margin-bottom: 5px;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+
+        .sub-welcome {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            color: var(--texto-oscuro);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        /* BOTONES DE ENLACES */
+        .link-card {
+            display: block;
+            background: var(--blanco);
+            border: 2px solid var(--rosa-pastel);
+            border-radius: 15px;
+            padding: 18px 20px;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: var(--texto-oscuro);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 10px var(--sombra);
+        }
+
+        /* Efecto al pasar el mouse */
+        .link-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--dorado);
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
+            background: #fffdfa;
+        }
+
+        /* Estilo para el texto dentro del botón */
+        .link-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .link-icon {
+            font-size: 1.5rem;
+            color: var(--dorado);
+        }
+
+        .link-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: var(--texto-oscuro);
+        }
+
+        /* Etiqueta pequeña debajo del texto */
+        .link-subtext {
+            font-size: 0.75rem;
+            color: #888;
+            margin-top: 4px;
+            font-weight: 300;
+            display: block;
+        }
+
+        /* SEPARADOR CORAZÓN */
+        .separator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 25px 0;
+            gap: 15px;
+        }
+
+        .separator-line {
+            height: 1px;
+            width: 60px;
+            background: linear-gradient(90deg, transparent, var(--dorado), transparent);
+        }
+
+        .separator-heart {
+            color: var(--dorado);
+            font-size: 1.2rem;
+        }
+
+        /* FOOTER */
+        .footer {
+            margin-top: 30px;
+            font-size: 0.7rem;
+            color: #999;
+            letter-spacing: 1px;
+        }
+
+        /* ANIMACIÓN DE ENTRADA */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ICONOS SVG */
+        .icon-svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--dorado);
+            transition: fill 0.3s;
+        }
+        
+        .link-card:hover .icon-svg {
+            fill: var(--rosa-fuerte);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- ======================================================= -->
+        <!-- AQUÍ VA TU LOGO PNG (Reemplaza el enlace de abajo)      -->
+        <!-- Sube tu imagen PNG a un lugar como Imgur, Dropbox o     -->
+        <!-- tu hosting, y pega el enlace directo aquí.              -->
+        <!-- ======================================================= -->
+        <img src="morena.png.jpeg" alt="Lamorena Beauty Co. Logo" class="logo">
+
+        <!-- TEXTO DE BIENVENIDA -->
+        <h1 class="welcome-text">Bienvenidos a Lamorena</h1>
+        <p class="sub-welcome">Beauty Co.</p>
+
+        <!-- BOTÓN 1: CATÁLOGO (Canva) -->
+        <a href="https://canva.link/en9xvddeiq64s0v" target="_blank" class="link-card">
+            <div class="link-content">
+                <svg class="icon-svg" viewBox="0 0 24 24">
+                    <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14H8v-2h8v2zm0-4H8v-2h8v2zm0-4H8V6h8v2z"/>
+                </svg>
+                <div>
+                    <span class="link-text">Catálogo de Skincare & Makeup</span>
+                    <span class="link-subtext">Ver productos coreanos</span>
+                </div>
+            </div>
+        </a>
+
+        <!-- BOTÓN 2: WHATSAPP (Asesorías) -->
+        <a href="https://wa.me/message/ZAHW6VGFR4NVP1" target="_blank" class="link-card">
+            <div class="link-content">
+                <svg class="icon-svg" viewBox="0 0 24 24">
+                    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.176 8.176 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.21.88 2.37 1 2.53.12.16 1.73 2.73 4.25 3.73 2.09.82 2.52.66 2.98.62.46-.04 1.48-.6 1.69-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29-.25-.12-1.48-.73-1.71-.81-.23-.08-.4-.12-.57.12-.17.25-.66.81-.81.98-.15.16-.3.18-.55.06-.25-.12-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.41-.55-.41z"/>
+                </svg>
+                <div>
+                    <span class="link-text">Asesoría Personalizada</span>
+                    <span class="link-subtext">Escríbenos por WhatsApp</span>
+                </div>
+            </div>
+        </a>
+
+        <!-- BOTÓN 3: TIKTOK -->
+        <a href="https://www.tiktok.com/@lamorena8847?_r=1&_t=ZS-99pHNXKhuGv" target="_blank" class="link-card">
+            <div class="link-content">
+                <svg class="icon-svg" viewBox="0 0 24 24">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                </svg>
+                <div>
+                    <span class="link-text">Síguenos en TikTok</span>
+                    <span class="link-subtext">Tips y novedades</span>
+                </div>
+            </div>
+        </a>
+
+        <!-- SEPARADOR DECORATIVO -->
+        <div class="separator">
+            <div class="separator-line"></div>
+            <div class="separator-heart">♥</div>
+            <div class="separator-line"></div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            &copy; 2024 LAMORENA BEAUTY CO. <br> Todos los derechos reservados.
+        </div>
+
+    </div>
+
+</body>
+</html>
