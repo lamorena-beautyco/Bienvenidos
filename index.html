@@ -43,25 +43,16 @@
             text-align: center;
             animation: fadeIn 1.2s ease-in-out;
             background: rgba(255, 255, 255, 0.6); /* Tarjeta blanca semitransparente */
-            padding: 30px 20px;
+            padding: 40px 20px; /* Aumenté un poco el padding superior ya que no hay logo */
             border-radius: 25px;
             box-shadow: 0 10px 30px var(--sombra);
             backdrop-filter: blur(10px);
         }
 
-        /* LOGO */
-        .logo {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            margin-bottom: 15px;
-            /* Si tu logo es PNG transparente, se verá perfecto aquí */
-        }
-
         /* TÍTULO DE BIENVENIDA */
         .welcome-text {
             font-family: 'Playfair Display', serif;
-            font-size: 2rem;
+            font-size: 2.2rem; /* Un poco más grande para compensar la ausencia del logo */
             color: var(--dorado);
             margin-bottom: 5px;
             font-style: italic;
@@ -183,13 +174,6 @@
 
     <div class="container">
         
-        <!-- ======================================================= -->
-        <!-- AQUÍ VA TU LOGO PNG (Reemplaza el enlace de abajo)      -->
-        <!-- Sube tu imagen PNG a un lugar como Imgur, Dropbox o     -->
-        <!-- tu hosting, y pega el enlace directo aquí.              -->
-        <!-- ======================================================= -->
-        <img src="morena.png.jpeg" alt="Lamorena Beauty Co. Logo" class="logo">
-
         <!-- TEXTO DE BIENVENIDA -->
         <h1 class="welcome-text">Bienvenidos a Lamorena</h1>
         <p class="sub-welcome">Beauty Co.</p>
