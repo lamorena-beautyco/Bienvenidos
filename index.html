@@ -4,93 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lamorena Beauty Co. | Enlaces Oficiales</title>
-    <!-- Importamos una fuente elegante de Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* VARIABLES DE COLOR */
         :root {
-            --dorado: #D4AF37; /* Un dorado un poco más oscuro para que se lea bien en fondo claro */
-            --rosa-pastel: #FADBD8; /* Rosa pastel suave */
-            --rosa-fuerte: #F1948A; /* Rosa un poco más intenso para hover */
-            --blanco: #ffffff;
-            --texto-oscuro: #4A4A4A;
-            --sombra: rgba(0, 0, 0, 0.08);
+            --amarillo-pastel: #FFF5CC;
+            --amarillo-suave: #FFE9A8;
+            --amarillo-dorado: #E6C878;
+            --rosa-pastel: #FFE4E1;
+            --rosa-suave: #FFD1DC;
+            --rosa-fuerte: #F7A8B8;
+            --blanco-crema: #FFFDF9;
+            --blanco: #FFFFFF;
+            --texto-oscuro: #4A403A;
+            --texto-suave: #8A7F78;
+            --sombra-suave: rgba(230, 200, 120, 0.15);
+            --sombra-fuerte: rgba(247, 168, 184, 0.25);
+            --verde-whatsapp: #25D366;
         }
 
-        /* ESTILOS GENERALES */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            /* Fondo claro con degradado rosa pastel */
-            background: linear-gradient(135deg, #ffffff 0%, #FADBD8 100%);
+            background: linear-gradient(135deg, #FFFDF9 0%, #FFF5CC 40%, #FFE4E1 100%);
+            background-attachment: fixed;
             font-family: 'Montserrat', sans-serif;
             color: var(--texto-oscuro);
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            padding: 30px 20px;
+            line-height: 1.6;
         }
 
-        /* CONTENEDOR PRINCIPAL */
         .container {
             width: 100%;
             max-width: 480px;
             text-align: center;
             animation: fadeIn 1.2s ease-in-out;
-            background: rgba(255, 255, 255, 0.6); /* Tarjeta blanca semitransparente */
-            padding: 40px 20px; /* Aumenté un poco el padding superior ya que no hay logo */
-            border-radius: 25px;
-            box-shadow: 0 10px 30px var(--sombra);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(15px);
+            padding: 45px 30px;
+            border-radius: 40px;
+            box-shadow: 0 20px 60px var(--sombra-suave);
+            border: 1px solid rgba(230, 200, 120, 0.3);
         }
 
-        /* TÍTULO DE BIENVENIDA */
+        /* LOGO */
+        .logo {
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 5px 15px rgba(230, 200, 120, 0.4));
+        }
+
+        /* TÍTULOS */
         .welcome-text {
             font-family: 'Playfair Display', serif;
-            font-size: 2.2rem; /* Un poco más grande para compensar la ausencia del logo */
-            color: var(--dorado);
+            font-size: 2.4rem;
+            color: var(--texto-oscuro);
             margin-bottom: 5px;
             font-style: italic;
+            font-weight: 600;
             letter-spacing: 1px;
         }
 
         .sub-welcome {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-            color: var(--texto-oscuro);
+            font-size: 0.75rem;
+            color: var(--rosa-fuerte);
             text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 30px;
+            letter-spacing: 6px;
             font-weight: 400;
+            margin-bottom: 35px;
         }
 
         /* BOTONES DE ENLACES */
         .link-card {
             display: block;
             background: var(--blanco);
-            border: 2px solid var(--rosa-pastel);
-            border-radius: 15px;
-            padding: 18px 20px;
+            border: 2px solid var(--amarillo-pastel);
+            border-radius: 60px;
+            padding: 18px 25px;
             margin-bottom: 15px;
             text-decoration: none;
             color: var(--texto-oscuro);
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 20px var(--sombra-suave);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 10px var(--sombra);
         }
 
         /* Efecto al pasar el mouse */
         .link-card:hover {
-            transform: translateY(-3px);
-            border-color: var(--dorado);
-            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.2);
-            background: #fffdfa;
+            transform: translateY(-4px);
+            border-color: var(--rosa-fuerte);
+            box-shadow: 0 15px 35px var(--sombra-fuerte);
+            background: linear-gradient(135deg, var(--amarillo-pastel), var(--rosa-pastel));
         }
 
         /* Estilo para el texto dentro del botón */
@@ -103,23 +113,19 @@
 
         .link-icon {
             font-size: 1.5rem;
-            color: var(--dorado);
+            color: var(--amarillo-dorado);
+            transition: color 0.3s;
+        }
+
+        .link-card:hover .link-icon {
+            color: var(--rosa-fuerte);
         }
 
         .link-text {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
             letter-spacing: 0.5px;
             color: var(--texto-oscuro);
-        }
-
-        /* Etiqueta pequeña debajo del texto */
-        .link-subtext {
-            font-size: 0.75rem;
-            color: #888;
-            margin-top: 4px;
-            font-weight: 300;
-            display: block;
         }
 
         /* SEPARADOR CORAZÓN */
@@ -127,93 +133,83 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 25px 0;
+            margin: 30px 0 20px;
             gap: 15px;
         }
 
         .separator-line {
             height: 1px;
             width: 60px;
-            background: linear-gradient(90deg, transparent, var(--dorado), transparent);
+            background: linear-gradient(90deg, transparent, var(--amarillo-dorado), transparent);
         }
 
         .separator-heart {
-            color: var(--dorado);
+            color: var(--rosa-fuerte);
             font-size: 1.2rem;
         }
 
         /* FOOTER */
         .footer {
-            margin-top: 30px;
+            margin-top: 25px;
             font-size: 0.7rem;
-            color: #999;
+            color: var(--texto-suave);
             letter-spacing: 1px;
         }
 
-        /* ANIMACIÓN DE ENTRADA */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* ICONOS SVG */
-        .icon-svg {
-            width: 24px;
-            height: 24px;
-            fill: var(--dorado);
-            transition: fill 0.3s;
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            .welcome-text { font-size: 1.8rem; }
+            .container { padding: 30px 20px; }
+            .logo { max-width: 180px; }
         }
-        
-        .link-card:hover .icon-svg {
-            fill: var(--rosa-fuerte);
-        }
-
     </style>
 </head>
 <body>
 
     <div class="container">
         
+        <!-- LOGO (Reemplaza el src con la URL de tu logo PNG) -->
+        <!-- Si no tienes logo, puedes borrar esta línea o dejarla vacía -->
+        <img src="https://i.ibb.co/6P0yC8q/logo-lamorena.png" alt="Lamorena Beauty Co." class="logo">
+
         <!-- TEXTO DE BIENVENIDA -->
         <h1 class="welcome-text">Bienvenidos a Lamorena</h1>
         <p class="sub-welcome">Beauty Co.</p>
 
-        <!-- BOTÓN 1: CATÁLOGO (Canva) -->
+        <!-- BOTÓN 1: TIENDA ONLINE -->
+        <a href="https://lamorena-beautyco.github.io/La-Morenaa/" target="_blank" class="link-card">
+            <div class="link-content">
+                <span class="link-icon">🛍️</span>
+                <span class="link-text">Tienda Online</span>
+            </div>
+        </a>
+
+        <!-- BOTÓN 2: CATÁLOGO CANVA -->
         <a href="https://canva.link/en9xvddeiq64s0v" target="_blank" class="link-card">
             <div class="link-content">
-                <svg class="icon-svg" viewBox="0 0 24 24">
-                    <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 14H8v-2h8v2zm0-4H8v-2h8v2zm0-4H8V6h8v2z"/>
-                </svg>
-                <div>
-                    <span class="link-text">Catálogo de Skincare & Makeup</span>
-                    <span class="link-subtext">Ver productos coreanos</span>
-                </div>
+                <span class="link-icon">📖</span>
+                <span class="link-text">Catálogo Completo</span>
             </div>
         </a>
 
-        <!-- BOTÓN 2: WHATSAPP (Asesorías) -->
-        <a href="https://wa.me/message/ZAHW6VGFR4NVP1" target="_blank" class="link-card">
+        <!-- BOTÓN 3: WHATSAPP ASESORÍAS -->
+        <a href="https://wa.me/573332267596" target="_blank" class="link-card">
             <div class="link-content">
-                <svg class="icon-svg" viewBox="0 0 24 24">
-                    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.39-4.19-1.15l-.3-.17-3.12.82.83-3.04-.2-.32a8.176 8.176 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zM8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.21.88 2.37 1 2.53.12.16 1.73 2.73 4.25 3.73 2.09.82 2.52.66 2.98.62.46-.04 1.48-.6 1.69-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29-.25-.12-1.48-.73-1.71-.81-.23-.08-.4-.12-.57.12-.17.25-.66.81-.81.98-.15.16-.3.18-.55.06-.25-.12-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.41-.55-.41z"/>
-                </svg>
-                <div>
-                    <span class="link-text">Asesoría Personalizada</span>
-                    <span class="link-subtext">Escríbenos por WhatsApp</span>
-                </div>
+                <span class="link-icon">💬</span>
+                <span class="link-text">Asesoría por WhatsApp</span>
             </div>
         </a>
 
-        <!-- BOTÓN 3: TIKTOK -->
+        <!-- BOTÓN 4: TIKTOK -->
         <a href="https://www.tiktok.com/@lamorena8847?_r=1&_t=ZS-99pHNXKhuGv" target="_blank" class="link-card">
             <div class="link-content">
-                <svg class="icon-svg" viewBox="0 0 24 24">
-                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-                </svg>
-                <div>
-                    <span class="link-text">Síguenos en TikTok</span>
-                    <span class="link-subtext">Tips y novedades</span>
-                </div>
+                <span class="link-icon">🎵</span>
+                <span class="link-text">Síguenos en TikTok</span>
             </div>
         </a>
 
@@ -226,7 +222,7 @@
 
         <!-- FOOTER -->
         <div class="footer">
-            &copy; 2024 LAMORENA BEAUTY CO. <br> Todos los derechos reservados.
+            &copy; 2024 LAMORENA BEAUTY CO.
         </div>
 
     </div>
