@@ -19,7 +19,6 @@
             --texto-suave: #8A7F78;
             --sombra-suave: rgba(230, 200, 120, 0.15);
             --sombra-fuerte: rgba(247, 168, 184, 0.25);
-            --verde-whatsapp: #25D366;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -95,7 +94,6 @@
             overflow: hidden;
         }
 
-        /* Efecto al pasar el mouse */
         .link-card:hover {
             transform: translateY(-4px);
             border-color: var(--rosa-fuerte);
@@ -103,7 +101,6 @@
             background: linear-gradient(135deg, var(--amarillo-pastel), var(--rosa-pastel));
         }
 
-        /* Estilo para el texto dentro del botón */
         .link-content {
             display: flex;
             align-items: center;
@@ -161,7 +158,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* RESPONSIVE */
         @media (max-width: 600px) {
             .welcome-text { font-size: 1.8rem; }
             .container { padding: 30px 20px; }
@@ -173,9 +169,11 @@
 
     <div class="container">
         
-        <!-- LOGO (Reemplaza el src con la URL de tu logo PNG) -->
-        <!-- Si no tienes logo, puedes borrar esta línea o dejarla vacía -->
-        <img src="https://i.ibb.co/6P0yC8q/logo-lamorena.png" alt="Lamorena Beauty Co." class="logo">
+        <!-- ======================================================= -->
+        <!-- LOGO: Reemplaza "TU_ENLACE_AQUI" con tu URL permanente -->
+        <!-- Ejemplo: src="https://i.imgur.com/tuimagen.png"         -->
+        <!-- ======================================================= -->
+        <img src="TU_ENLACE_AQUI" alt="Lamorena Beauty Co." class="logo" onerror="this.style.display='none'">
 
         <!-- TEXTO DE BIENVENIDA -->
         <h1 class="welcome-text">Bienvenidos a Lamorena</h1>
