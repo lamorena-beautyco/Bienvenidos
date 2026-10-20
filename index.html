@@ -4,229 +4,299 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lamorena Beauty Co. | Enlaces Oficiales</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --amarillo-pastel: #FFF5CC;
-            --amarillo-suave: #FFE9A8;
+            --crema: #FFFDF9;
+            --amarillo: #FFF5CC;
             --amarillo-dorado: #E6C878;
-            --rosa-pastel: #FFE4E1;
-            --rosa-suave: #FFD1DC;
+            --rosa: #FFE4E1;
             --rosa-fuerte: #F7A8B8;
-            --blanco-crema: #FFFDF9;
-            --blanco: #FFFFFF;
-            --texto-oscuro: #4A403A;
-            --texto-suave: #8A7F78;
-            --sombra-suave: rgba(230, 200, 120, 0.15);
-            --sombra-fuerte: rgba(247, 168, 184, 0.25);
+            --texto: #4A403A;
+            --texto-suave: #6F645D;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        html { -webkit-text-size-adjust: 100%; }
+
         body {
-            background: linear-gradient(135deg, #FFFDF9 0%, #FFF5CC 40%, #FFE4E1 100%);
-            background-attachment: fixed;
+            background: var(--crema);
             font-family: 'Montserrat', sans-serif;
-            color: var(--texto-oscuro);
+            color: var(--texto);
             min-height: 100vh;
+            line-height: 1.6;
             display: flex;
             justify-content: center;
-            align-items: center;
-            padding: 30px 20px;
-            line-height: 1.6;
         }
 
-        .container {
+        .page {
             width: 100%;
             max-width: 480px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(180deg, var(--crema) 0%, var(--amarillo) 55%, var(--rosa) 100%);
+        }
+
+        /* ---------- PORTADA ---------- */
+        .hero {
+            padding: 48px 32px 36px;
             text-align: center;
-            animation: fadeIn 1.2s ease-in-out;
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(15px);
-            padding: 45px 30px;
-            border-radius: 40px;
-            box-shadow: 0 20px 60px var(--sombra-suave);
-            border: 1px solid rgba(230, 200, 120, 0.3);
         }
 
-        /* LOGO */
-        .logo {
-            width: 100%;
-            max-width: 220px;
-            height: auto;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 5px 15px rgba(230, 200, 120, 0.4));
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* TÍTULOS */
-        .welcome-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.4rem;
-            color: var(--texto-oscuro);
-            margin-bottom: 5px;
-            font-style: italic;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        .sub-welcome {
-            font-size: 0.75rem;
-            color: var(--rosa-fuerte);
-            text-transform: uppercase;
-            letter-spacing: 6px;
-            font-weight: 400;
-            margin-bottom: 35px;
-        }
-
-        /* BOTONES DE ENLACES */
-        .link-card {
-            display: block;
-            background: var(--blanco);
-            border: 2px solid var(--amarillo-pastel);
-            border-radius: 60px;
-            padding: 18px 25px;
-            margin-bottom: 15px;
-            text-decoration: none;
-            color: var(--texto-oscuro);
-            transition: all 0.4s ease;
-            box-shadow: 0 8px 20px var(--sombra-suave);
-            position: relative;
+        .arco {
+            width: 190px;
+            height: 240px;
+            margin: 0 auto 28px;
+            border-radius: 190px 190px 0 0;
             overflow: hidden;
+            background: var(--rosa);
+            border: 1px solid var(--amarillo-dorado);
         }
 
-        .link-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--rosa-fuerte);
-            box-shadow: 0 15px 35px var(--sombra-fuerte);
-            background: linear-gradient(135deg, var(--amarillo-pastel), var(--rosa-pastel));
+        .arco img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
-        .link-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
+        .logo {
+            display: block;
+            max-width: 160px;
+            height: auto;
+            margin: 0 auto 18px;
         }
 
-        .link-icon {
-            font-size: 1.5rem;
-            color: var(--amarillo-dorado);
-            transition: color 0.3s;
-        }
-
-        .link-card:hover .link-icon {
-            color: var(--rosa-fuerte);
-        }
-
-        .link-text {
-            font-size: 1rem;
+        .marca {
+            font-family: 'Playfair Display', serif;
             font-weight: 600;
-            letter-spacing: 0.5px;
-            color: var(--texto-oscuro);
+            font-size: clamp(3.2rem, 17vw, 4.6rem);
+            line-height: 1;
+            letter-spacing: -0.5px;
+            color: var(--texto);
         }
 
-        /* SEPARADOR CORAZÓN */
-        .separator {
+        .marca-sub {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.25rem;
+            color: var(--texto-suave);
+            margin-top: 6px;
+        }
+
+        .lema {
+            margin-top: 22px;
+            font-size: 0.95rem;
+            font-weight: 300;
+            color: var(--texto-suave);
+        }
+
+        /* ---------- CINTA ---------- */
+        .cinta {
+            border-top: 1px solid var(--amarillo-dorado);
+            border-bottom: 1px solid var(--amarillo-dorado);
+            background: var(--crema);
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 12px 0;
+        }
+
+        .cinta-pista {
+            display: inline-flex;
+            animation: desplazar 28s linear infinite;
+        }
+
+        .cinta-pista span {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            padding: 0 14px;
+            color: var(--texto);
+        }
+
+        .cinta-pista .rombo {
+            color: var(--rosa-fuerte);
+            font-style: normal;
+            padding: 0 4px;
+        }
+
+        @keyframes desplazar {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        /* ---------- ENLACES ---------- */
+        .enlaces {
+            flex: 1;
+            padding: 12px 32px 0;
+            list-style: none;
+        }
+
+        .enlaces li + li {
+            border-top: 1px solid rgba(230, 200, 120, 0.6);
+        }
+
+        .enlace {
             display: flex;
             align-items: center;
-            justify-content: center;
-            margin: 30px 0 20px;
-            gap: 15px;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 22px 8px;
+            text-decoration: none;
+            color: var(--texto);
+            transition: background 0.3s ease, padding 0.3s ease;
         }
 
-        .separator-line {
-            height: 1px;
-            width: 60px;
-            background: linear-gradient(90deg, transparent, var(--amarillo-dorado), transparent);
+        .enlace:hover,
+        .enlace:focus-visible {
+            background: rgba(255, 255, 255, 0.65);
+            padding-left: 18px;
+            padding-right: 18px;
         }
 
-        .separator-heart {
-            color: var(--rosa-fuerte);
-            font-size: 1.2rem;
+        .enlace:focus-visible {
+            outline: 2px solid var(--texto);
+            outline-offset: 2px;
         }
 
-        /* FOOTER */
-        .footer {
-            margin-top: 25px;
+        .enlace-titulo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .enlace-detalle {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--texto-suave);
+            margin-top: 2px;
+        }
+
+        .flecha {
+            flex: none;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid var(--texto);
+            display: grid;
+            place-items: center;
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+
+        .flecha svg { width: 16px; height: 16px; stroke: var(--texto); }
+
+        .enlace:hover .flecha,
+        .enlace:focus-visible .flecha {
+            background: var(--rosa-fuerte);
+            border-color: var(--rosa-fuerte);
+        }
+
+        /* ---------- PIE ---------- */
+        .pie {
+            padding: 36px 32px 32px;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--texto);
+        }
+
+        .pie small {
+            display: block;
+            margin-top: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
             font-size: 0.7rem;
             color: var(--texto-suave);
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (max-width: 600px) {
-            .welcome-text { font-size: 1.8rem; }
-            .container { padding: 30px 20px; }
-            .logo { max-width: 180px; }
+        @media (prefers-reduced-motion: reduce) {
+            .cinta-pista { animation: none; }
+            .enlace, .flecha { transition: none; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        
-        <!-- ======================================================= -->
-        <!-- LOGO: Reemplaza "TU_ENLACE_AQUI" con tu URL permanente -->
-        <!-- Ejemplo: src="https://i.imgur.com/tuimagen.png"         -->
-        <!-- ======================================================= -->
-        <img src="TU_ENLACE_AQUI" alt="Lamorena Beauty Co." class="logo" onerror="this.style.display='none'">
+    <main class="page">
 
-        <!-- TEXTO DE BIENVENIDA -->
-        <h1 class="welcome-text">Bienvenidos a Lamorena</h1>
-        <p class="sub-welcome">Beauty Co.</p>
+        <header class="hero">
 
-        <!-- BOTÓN 1: TIENDA ONLINE -->
-        <a href="https://lamorena-beautyco.github.io/La-Morenaa/" target="_blank" class="link-card">
-            <div class="link-content">
-                <span class="link-icon">🛍️</span>
-                <span class="link-text">Tienda Online</span>
+            <!-- Imagen de portada (la misma de la tienda). Si no carga, se oculta sola. -->
+            <div class="arco">
+                <img src="https://i.pinimg.com/736x/55/fe/3d/55fe3d72b725ac22f5485f7672fbc2f6.jpg" alt="Lamorena Beauty Co." onerror="this.parentElement.style.display='none'">
             </div>
-        </a>
 
-        <!-- BOTÓN 2: CATÁLOGO CANVA -->
-        <a href="https://canva.link/en9xvddeiq64s0v" target="_blank" class="link-card">
-            <div class="link-content">
-                <span class="link-icon">📖</span>
-                <span class="link-text">Catálogo Completo</span>
+            <!-- LOGO (opcional): reemplaza TU_ENLACE_AQUI por la URL de tu logo -->
+            <img src="TU_ENLACE_AQUI" alt="" class="logo" onerror="this.style.display='none'">
+
+            <h1 class="marca">Lamorena</h1>
+            <p class="marca-sub">Beauty Co.</p>
+            <p class="lema">Define tu brillo.</p>
+        </header>
+
+        <!-- Cinta con los mismos textos de la tienda -->
+        <div class="cinta" aria-hidden="true">
+            <div class="cinta-pista">
+                <span>Skincare coreano</span><span class="rombo">◆</span>
+                <span>Maquillaje profesional</span><span class="rombo">◆</span>
+                <span>Pedidos por WhatsApp</span><span class="rombo">◆</span>
+                <span>Lamorena Beauty Co.</span><span class="rombo">◆</span>
+                <span>Skincare coreano</span><span class="rombo">◆</span>
+                <span>Maquillaje profesional</span><span class="rombo">◆</span>
+                <span>Pedidos por WhatsApp</span><span class="rombo">◆</span>
+                <span>Lamorena Beauty Co.</span><span class="rombo">◆</span>
             </div>
-        </a>
-
-        <!-- BOTÓN 3: WHATSAPP ASESORÍAS -->
-        <a href="https://wa.me/573332267596" target="_blank" class="link-card">
-            <div class="link-content">
-                <span class="link-icon">💬</span>
-                <span class="link-text">Asesoría por WhatsApp</span>
-            </div>
-        </a>
-
-        <!-- BOTÓN 4: TIKTOK -->
-        <a href="https://www.tiktok.com/@lamorena8847?_r=1&_t=ZS-99pHNXKhuGv" target="_blank" class="link-card">
-            <div class="link-content">
-                <span class="link-icon">🎵</span>
-                <span class="link-text">Síguenos en TikTok</span>
-            </div>
-        </a>
-
-        <!-- SEPARADOR DECORATIVO -->
-        <div class="separator">
-            <div class="separator-line"></div>
-            <div class="separator-heart">♥</div>
-            <div class="separator-line"></div>
         </div>
 
-        <!-- FOOTER -->
-        <div class="footer">
-            &copy; 2024 LAMORENA BEAUTY CO.
-        </div>
+        <ul class="enlaces">
+            <li>
+                <a class="enlace" href="https://lamorena-beautyco.github.io/La-Morenaa/" target="_blank" rel="noopener">
+                    <span>
+                        <span class="enlace-titulo">Tienda Online</span>
+                        <span class="enlace-detalle">Elige tus productos y pide por WhatsApp</span>
+                    </span>
+                    <span class="flecha" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="enlace" href="https://wa.me/573332267596" target="_blank" rel="noopener">
+                    <span>
+                        <span class="enlace-titulo">Asesoría por WhatsApp</span>
+                        <span class="enlace-detalle">Te ayudamos a elegir tu rutina</span>
+                    </span>
+                    <span class="flecha" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="enlace" href="https://www.tiktok.com/@lamorena8847?_r=1&_t=ZS-99pHNXKhuGv" target="_blank" rel="noopener">
+                    <span>
+                        <span class="enlace-titulo">TikTok</span>
+                        <span class="enlace-detalle">Mira nuestros videos y novedades</span>
+                    </span>
+                    <span class="flecha" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </span>
+                </a>
+            </li>
+        </ul>
 
-    </div>
+        <footer class="pie">
+            Tu belleza, simplemente irresistible
+            <small>&copy; 2024 Lamorena Beauty Co.</small>
+        </footer>
+
+    </main>
 
 </body>
 </html>
